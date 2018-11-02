@@ -1,0 +1,39 @@
+﻿<Page
+    x:Class="Tethys.Sample.Views.Basic.HomePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Tethys.Sample.Views.Basic"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:views="using:Tethys.Sample.Views"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Padding="28 0">
+        <GridView ItemsSource="{x:Bind Pages}" SelectionChanged="GridView_SelectionChanged">
+            <GridView.ItemContainerStyle>
+                <Style TargetType="GridViewItem">
+                    <Setter Property="Background" Value="{ThemeResource SystemControlAcrylicElementBrush}"/>
+                </Style>
+            </GridView.ItemContainerStyle>
+            <GridView.ItemTemplate>
+                <DataTemplate x:DataType="views:IDetailPage">
+                    <Grid Padding="16">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <FontIcon FontFamily="{x:Bind GlyphFontFamily}" FontSize="60" Glyph="{x:Bind Glyph}"/>
+                        <StackPanel Grid.Column="1" Margin="12 0 0 0">
+                            <TextBlock Text="{x:Bind TitleName}"
+                                       FontWeight="Bold"
+                                       Foreground="{ThemeResource SystemAccentColor}"
+                                       Style="{StaticResource SubtitleTextBlockStyle}"/>
+                            <TextBlock Text="{x:Bind Description}"/>
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+    </Grid>
+</Page>
