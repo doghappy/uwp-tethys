@@ -35,7 +35,7 @@ namespace Tethys.Sample.Views.Basic
 
         public string Description => "8 beautiful themes";
 
-        public string Glyph => "\ue790";
+        public string Glyph => "\ue771";
 
         public FontFamily GlyphFontFamily { get; }
 

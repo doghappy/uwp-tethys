@@ -23,7 +23,8 @@ namespace Tethys.Sample.Views.Basic
             Pages = new List<IDetailPage>
             {
                 new WtfPage(),
-                new ThemePage()
+                new ThemePage(),
+                new ColorBrushPage()
             };
         }
 

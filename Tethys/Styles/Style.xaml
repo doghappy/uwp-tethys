@@ -6,10 +6,12 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="../Themes/GreenWave.xaml"/>
     </ResourceDictionary.MergedDictionaries>
-    
+
     <SolidColorBrush x:Key="Secondary" Color="#aaa"/>
-    <SolidColorBrush x:Key="Danger" Color="#ff5b57"/>
     <SolidColorBrush x:Key="Success" Color="#22d7bb"/>
+    <SolidColorBrush x:Key="Warning" Color="#ffc442"/>
+    <SolidColorBrush x:Key="Danger" Color="#ff5b57"/>
+    <SolidColorBrush x:Key="Dark" Color="#333"/>
 
     <Style TargetType="FontIcon" x:Key="WtfIcon">
         <Setter Property="FontFamily" Value="Assets/iconfont.ttf#wtf"/>
