@@ -4,116 +4,88 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Tethys.Sample.Views.Basic"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Page.Resources>
-        <ResourceDictionary>
-            <Style TargetType="Button" x:Key="Button">
-                <Setter Property="Padding" Value="26 8"/>
-                <Setter Property="Background" Value="{ThemeResource ButtonBackground}" />
-                <Setter Property="Foreground" Value="{ThemeResource ButtonForeground}" />
-                <Setter Property="BorderBrush" Value="{ThemeResource ButtonBorderBrush}" />
-                <Setter Property="BorderThickness" Value="{ThemeResource ButtonBorderThemeThickness}" />
-                <Setter Property="HorizontalAlignment" Value="Left" />
-                <Setter Property="VerticalAlignment" Value="Center" />
-                <Setter Property="FontFamily" Value="{ThemeResource ContentControlThemeFontFamily}" />
-                <Setter Property="FontWeight" Value="Normal" />
-                <Setter Property="FontSize" Value="{ThemeResource ControlContentThemeFontSize}" />
-                <Setter Property="UseSystemFocusVisuals" Value="{StaticResource UseSystemFocusVisuals}" />
-                <Setter Property="FocusVisualMargin" Value="-3" />
-                <Setter Property="Template">
-                    <Setter.Value>
-                        <ControlTemplate TargetType="Button">
-                            <Grid x:Name="RootGrid" CornerRadius="20" Background="{TemplateBinding Background}">
+    <Grid Padding="28 0 0 0">
+        <ScrollViewer ScrollViewer.HorizontalScrollMode="Auto">
+            <StackPanel>
+                <StackPanel Margin="0 0 0 20">
+                    <Button Content="ButtonPrimary" Margin="10" Style="{StaticResource ButtonPrimary}"/>
+                    <Button Content="ButtonSuccess" Margin="10" Style="{StaticResource ButtonSuccess}"/>
+                    <Button Content="ButtonWarning" Margin="10" Style="{StaticResource ButtonWarning}"/>
+                    <Button Content="ButtonDanger" Margin="10" Style="{StaticResource ButtonDanger}"/>
+                    <Button Content="ButtonDark" Margin="10" Style="{StaticResource ButtonDark}"/>
+                    <Button Content="Disable" IsEnabled="False" Margin="10" Style="{StaticResource ButtonPrimary}"/>
+                </StackPanel>
 
-                                <VisualStateManager.VisualStateGroups>
-                                    <VisualStateGroup x:Name="CommonStates">
-                                        <VisualState x:Name="Normal">
+                <StackPanel Margin="0 0 0 20">
+                    <Button Content="ButtonPrimarySmall" Margin="10" Style="{StaticResource ButtonPrimarySmall}"/>
+                    <Button Content="ButtonSuccessSmall" Margin="10" Style="{StaticResource ButtonSuccessSmall}"/>
+                    <Button Content="ButtonWarningSmall" Margin="10" Style="{StaticResource ButtonWarningSmall}"/>
+                    <Button Content="ButtonDangerSmall" Margin="10" Style="{StaticResource ButtonDangerSmall}"/>
+                    <Button Content="ButtonDarkSmall" Margin="10" Style="{StaticResource ButtonDarkSmall}"/>
+                    <Button Content="Disable" IsEnabled="False" Margin="10" Style="{StaticResource ButtonPrimarySmall}"/>
+                </StackPanel>
 
-                                            <Storyboard>
-                                                <PointerUpThemeAnimation Storyboard.TargetName="RootGrid" />
-                                            </Storyboard>
-                                        </VisualState>
+                <StackPanel Margin="0 0 0 20">
+                    <Button Content="ButtonPrimaryMiddle" Margin="10" Style="{StaticResource ButtonPrimaryMiddle}"/>
+                    <Button Content="ButtonSuccessMiddle" Margin="10" Style="{StaticResource ButtonSuccessMiddle}"/>
+                    <Button Content="ButtonWarningMiddle" Margin="10" Style="{StaticResource ButtonWarningMiddle}"/>
+                    <Button Content="ButtonDangerMiddle" Margin="10" Style="{StaticResource ButtonDangerMiddle}"/>
+                    <Button Content="ButtonDarkMiddle" Margin="10" Style="{StaticResource ButtonDarkMiddle}"/>
+                    <Button Content="Disable" IsEnabled="False" Margin="10" Style="{StaticResource ButtonPrimaryMiddle}"/>
+                </StackPanel>
 
-                                        <VisualState x:Name="PointerOver">
+                <StackPanel Margin="0 0 0 20">
+                    <Button Content="ButtonPrimaryLarge" Margin="10" Style="{StaticResource ButtonPrimaryLarge}"/>
+                    <Button Content="ButtonSuccessLarge" Margin="10" Style="{StaticResource ButtonSuccessLarge}"/>
+                    <Button Content="ButtonWarningLarge" Margin="10" Style="{StaticResource ButtonWarningLarge}"/>
+                    <Button Content="ButtonDangerLarge" Margin="10" Style="{StaticResource ButtonDangerLarge}"/>
+                    <Button Content="ButtonDarkLarge" Margin="10" Style="{StaticResource ButtonDarkLarge}"/>
+                    <Button Content="Disable" IsEnabled="False" Margin="10" Style="{StaticResource ButtonPrimaryLarge}"/>
+                </StackPanel>
 
-                                            <Storyboard>
-                                                <!--<ObjectAnimationUsingKeyFrames Storyboard.TargetName="RootGrid" Storyboard.TargetProperty="Background">
-                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonBackgroundPointerOver}" />
-                                                </ObjectAnimationUsingKeyFrames>
-                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter" Storyboard.TargetProperty="BorderBrush">
-                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonBorderBrushPointerOver}" />
-                                                </ObjectAnimationUsingKeyFrames>-->
-                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter" Storyboard.TargetProperty="Foreground">
-                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonForegroundPointerOver}" />
-                                                </ObjectAnimationUsingKeyFrames>
-                                                <PointerUpThemeAnimation Storyboard.TargetName="RootGrid" />
-                                            </Storyboard>
-                                        </VisualState>
+                <StackPanel Margin="0 0 0 20">
+                    <Button Content="ButtonOutLinePrimary" Margin="10" Style="{StaticResource ButtonOutLinePrimary}"/>
+                    <Button Content="ButtonOutLineSuccess" Margin="10" Style="{StaticResource ButtonOutLineSuccess}"/>
+                    <Button Content="ButtonOutLineWarning" Margin="10" Style="{StaticResource ButtonOutLineWarning}"/>
+                    <Button Content="ButtonOutLineDanger" Margin="10" Style="{StaticResource ButtonOutLineDanger}"/>
+                    <Button Content="ButtonOutLineDark" Margin="10" Style="{StaticResource ButtonOutLineDark}"/>
+                    <Button Content="Disable" IsEnabled="False" Margin="10" Style="{StaticResource ButtonOutLinePrimary}"/>
+                </StackPanel>
 
-                                        <VisualState x:Name="Pressed">
+                <StackPanel Margin="0 0 0 20">
+                    <Button Content="ButtonOutLinePrimarySmall" Margin="10" Style="{StaticResource ButtonOutLinePrimarySmall}"/>
+                    <Button Content="ButtonOutLineSuccessSmall" Margin="10" Style="{StaticResource ButtonOutLineSuccessSmall}"/>
+                    <Button Content="ButtonOutLineWarningSmall" Margin="10" Style="{StaticResource ButtonOutLineWarningSmall}"/>
+                    <Button Content="ButtonOutLineDangerSmall" Margin="10" Style="{StaticResource ButtonOutLineDangerSmall}"/>
+                    <Button Content="ButtonOutLineDarkSmall" Margin="10" Style="{StaticResource ButtonOutLineDarkSmall}"/>
+                    <Button Content="Disable" IsEnabled="False" Margin="10" Style="{StaticResource ButtonOutLinePrimarySmall}"/>
+                </StackPanel>
 
-                                            <Storyboard>
-                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RootGrid" Storyboard.TargetProperty="Background">
-                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonBackgroundPressed}" />
-                                                </ObjectAnimationUsingKeyFrames>
-                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter" Storyboard.TargetProperty="BorderBrush">
-                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonBorderBrushPressed}" />
-                                                </ObjectAnimationUsingKeyFrames>
-                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter" Storyboard.TargetProperty="Foreground">
-                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonForegroundPressed}" />
-                                                </ObjectAnimationUsingKeyFrames>
-                                                <PointerDownThemeAnimation Storyboard.TargetName="RootGrid" />
-                                            </Storyboard>
-                                        </VisualState>
+                <StackPanel Margin="0 0 0 20">
+                    <Button Content="ButtonOutLinePrimaryMiddle" Margin="10" Style="{StaticResource ButtonOutLinePrimaryMiddle}"/>
+                    <Button Content="ButtonOutLineSuccessMiddle" Margin="10" Style="{StaticResource ButtonOutLineSuccessMiddle}"/>
+                    <Button Content="ButtonOutLineWarningMiddle" Margin="10" Style="{StaticResource ButtonOutLineWarningMiddle}"/>
+                    <Button Content="ButtonOutLineDangerMiddle" Margin="10" Style="{StaticResource ButtonOutLineDangerMiddle}"/>
+                    <Button Content="ButtonOutLineDarkMiddle" Margin="10" Style="{StaticResource ButtonOutLineDarkMiddle}"/>
+                    <Button Content="Disable" IsEnabled="False" Margin="10" Style="{StaticResource ButtonOutLinePrimaryMiddle}"/>
+                </StackPanel>
 
-                                        <VisualState x:Name="Disabled">
+                <StackPanel Margin="0 0 0 20">
+                    <Button Content="ButtonOutLinePrimaryLarge" Margin="10" Style="{StaticResource ButtonOutLinePrimaryLarge}"/>
+                    <Button Content="ButtonOutLineSuccessLarge" Margin="10" Style="{StaticResource ButtonOutLineSuccessLarge}"/>
+                    <Button Content="ButtonOutLineWarningLarge" Margin="10" Style="{StaticResource ButtonOutLineWarningLarge}"/>
+                    <Button Content="ButtonOutLineDangerLarge" Margin="10" Style="{StaticResource ButtonOutLineDangerLarge}"/>
+                    <Button Content="ButtonOutLineDarkLarge" Margin="10" Style="{StaticResource ButtonOutLineDarkLarge}"/>
+                    <Button Content="Disable" IsEnabled="False" Margin="10" Style="{StaticResource ButtonOutLinePrimaryLarge}"/>
+                </StackPanel>
 
-                                            <Storyboard>
-                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RootGrid" Storyboard.TargetProperty="Background">
-                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonBackgroundDisabled}" />
-                                                </ObjectAnimationUsingKeyFrames>
-                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter" Storyboard.TargetProperty="BorderBrush">
-                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonBorderBrushDisabled}" />
-                                                </ObjectAnimationUsingKeyFrames>
-                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter" Storyboard.TargetProperty="Foreground">
-                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonForegroundDisabled}" />
-                                                </ObjectAnimationUsingKeyFrames>
-                                            </Storyboard>
-                                        </VisualState>
-                                    </VisualStateGroup>
-
-                                </VisualStateManager.VisualStateGroups>
-                                <ContentPresenter x:Name="ContentPresenter"
-                            BorderBrush="{TemplateBinding BorderBrush}"
-                            BorderThickness="{TemplateBinding BorderThickness}"
-                            Content="{TemplateBinding Content}"
-                            ContentTransitions="{TemplateBinding ContentTransitions}"
-                            ContentTemplate="{TemplateBinding ContentTemplate}"
-                            Padding="{TemplateBinding Padding}"
-                            HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
-                            VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
-                            AutomationProperties.AccessibilityView="Raw" />
-
-                            </Grid>
-                        </ControlTemplate>
-                    </Setter.Value>
-                </Setter>
-            </Style>
-            <Style TargetType="Button" x:Key="ButtonPrimary" BasedOn="{StaticResource Button}">
-                <Setter Property="Background" Value="{StaticResource Primary}"/>
-            </Style>
-        </ResourceDictionary>
-    </Page.Resources>
-
-    <Grid Background="White">
-        <StackPanel>
-            <Border CornerRadius="20">
-                <Button Content="Button" Style="{StaticResource ButtonPrimary}"/>
-            </Border>
-            <Button Content="Button" Style="{StaticResource ButtonPrimary}"/>
-        </StackPanel>
+                <ToggleButton Margin="10" Content="ToggleButton"/>
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Page>
