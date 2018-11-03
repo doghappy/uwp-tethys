@@ -23,7 +23,7 @@ namespace Tethys.Sample.Views.Basic
         public event PropertyChangedEventHandler PropertyChanged;
 
         public string NavTitile => "Worktile Icon Font";
-        public string TitleName => NavTitile;
+        public string TitleName => "Wtf";
         public string Description => "Worktile Icon Font";
         public string Glyph => "\ue164";
         public FontFamily GlyphFontFamily { get; }

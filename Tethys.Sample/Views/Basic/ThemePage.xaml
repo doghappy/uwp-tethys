@@ -1,0 +1,47 @@
+﻿<Page
+    x:Class="Tethys.Sample.Views.Basic.ThemePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Tethys.Sample.Views.Basic"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <!--<TextBlock Text="test" Foreground="{StaticResource Primary}"/>
+        <Button Content="test" Click="Button_Click"/>-->
+        <ScrollViewer>
+            <StackPanel>
+                <GridView ItemsSource="{x:Bind Themes}" SelectedItem="{x:Bind ThemeItem, Mode=TwoWay}" ScrollViewer.VerticalScrollMode="Disabled">
+                    <GridView.ItemContainerStyle>
+                        <Style TargetType="GridViewItem">
+                            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                        </Style>
+                    </GridView.ItemContainerStyle>
+                    <GridView.ItemTemplate>
+                        <DataTemplate x:DataType="local:ThemeItem">
+                            <StackPanel Padding="16" Background="{x:Bind PrimaryColor}" Width="200" Height="80">
+                                <TextBlock HorizontalAlignment="Center" Text="{x:Bind Theme}"/>
+                                <TextBlock HorizontalAlignment="Center" Text="{x:Bind ChineseName}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </GridView.ItemTemplate>
+                </GridView>
+
+                <StackPanel Padding="28">
+                    <TextBlock Style="{StaticResource TitleTextBlockStyle}" FontWeight="SemiBold" Text="Usage" Margin="0 0 0 16"/>
+                    <StackPanel Background="{StaticResource SystemControlAcrylicWindowBrush}" Padding="16">
+                        <RichTextBlock Style="{StaticResource XamlCodeRichTextBlockStyle}">
+                            <Paragraph>
+                                ThemeSelector.ChangeTheme(TethysTheme.GreenWave);
+                                <LineBreak/>
+                                ThemeSelector.ReloadPage&lt;MainPage&gt;();
+                            </Paragraph>
+                        </RichTextBlock>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

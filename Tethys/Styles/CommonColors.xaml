@@ -1,8 +1,0 @@
-﻿<ResourceDictionary
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Tethys.Styles">
-    <SolidColorBrush x:Key="Secondary" Color="#aaa"/>
-    <SolidColorBrush x:Key="Danger" Color="#ff5b57"/>
-    <SolidColorBrush x:Key="Success" Color="#22d7bb"/>
-</ResourceDictionary>
