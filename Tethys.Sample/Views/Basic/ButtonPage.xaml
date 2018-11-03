@@ -85,6 +85,25 @@
                 </StackPanel>
 
                 <ToggleButton Margin="10" Content="ToggleButton"/>
+
+                <StackPanel Margin="0 28 28 28">
+                    <TextBlock Style="{StaticResource TitleTextBlockStyle}" FontWeight="SemiBold" Text="Usage" Margin="0 0 0 16"/>
+                    <StackPanel Background="{StaticResource SystemControlAcrylicWindowBrush}" Padding="16">
+                        <RichTextBlock Style="{StaticResource XamlCodeRichTextBlockStyle}">
+                            <Paragraph>
+                                &lt;Button Content=&quot;ButtonPrimarySmall&quot; Style=&quot;{StaticResource ButtonPrimarySmall}&quot;/&gt;
+                                <LineBreak/>
+                                &lt;Button Content=&quot;ButtonDangerMiddle&quot; Style=&quot;{StaticResource ButtonDangerMiddle}&quot;/&gt;
+                                <LineBreak/>
+                                &lt;Button Content=&quot;ButtonOutLinePrimarySmall&quot; Style=&quot;{StaticResource ButtonOutLinePrimarySmall}&quot;/&gt;
+                                <LineBreak/>
+                                &lt;Button Content=&quot;ButtonOutLineDangerMiddle&quot; Style=&quot;{StaticResource ButtonOutLineDangerMiddle}&quot;/&gt;
+                                <LineBreak/>
+                                &lt;ToggleButton Content=&quot;ToggleButton&quot;/&gt;
+                            </Paragraph>
+                        </RichTextBlock>
+                    </StackPanel>
+                </StackPanel>
             </StackPanel>
         </ScrollViewer>
     </Grid>

@@ -9,8 +9,6 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <!--<TextBlock Text="test" Foreground="{StaticResource Primary}"/>
-        <Button Content="test" Click="Button_Click"/>-->
         <ScrollViewer>
             <StackPanel>
                 <GridView ItemsSource="{x:Bind Themes}" SelectedItem="{x:Bind ThemeItem, Mode=TwoWay}" ScrollViewer.VerticalScrollMode="Disabled">

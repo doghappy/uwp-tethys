@@ -35,6 +35,19 @@
             <Border Background="{StaticResource Dark}" Padding="8">
                 <TextBlock Text="Dark"/>
             </Border>
+
+            <StackPanel Margin="0 28 28 28">
+                <TextBlock Style="{StaticResource TitleTextBlockStyle}" FontWeight="SemiBold" Text="Usage" Margin="0 0 0 16"/>
+                <StackPanel Background="{StaticResource SystemControlAcrylicWindowBrush}" Padding="16">
+                    <RichTextBlock Style="{StaticResource XamlCodeRichTextBlockStyle}">
+                        <Paragraph>
+                            Background=&quot;{StaticResource Success}&quot;
+                            <LineBreak/>
+                            Foreground=&quot;{StaticResource Danger}&quot;
+                        </Paragraph>
+                    </RichTextBlock>
+                </StackPanel>
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Page>
