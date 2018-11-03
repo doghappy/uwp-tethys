@@ -22,7 +22,6 @@ namespace Tethys.Sample.Views.Basic
             InitializeComponent();
             Pages = new List<IDetailPage>
             {
-                new WtfPage(),
                 new WtfPage()
             };
         }

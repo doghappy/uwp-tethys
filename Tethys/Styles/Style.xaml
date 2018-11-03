@@ -9,6 +9,5 @@
 
     <Style TargetType="FontIcon" x:Key="WtfIcon">
         <Setter Property="FontFamily" Value="Assets/iconfont.ttf#wtf"/>
-        <Setter Property="Foreground" Value="Yellow"/>
     </Style>
 </ResourceDictionary>

@@ -7,8 +7,15 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="ms-appx:///Tethys/Styles/Style.xaml"/>
-                <ResourceDictionary Source="/Styles/Style.xaml"/>
             </ResourceDictionary.MergedDictionaries>
+
+            <Style x:Key="XamlCodeRichTextBlockStyle" TargetType="RichTextBlock">
+                <Setter Property="Foreground" Value="{ThemeResource SystemControlForegroundBaseHighBrush}"/>
+                <Setter Property="FontWeight" Value="Light" />
+                <Setter Property="FontFamily" Value="Consolas" />
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="TextWrapping" Value="NoWrap" />
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

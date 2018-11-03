@@ -9,7 +9,7 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid Padding="28 0">
+    <Grid>
         <GridView ItemsSource="{x:Bind Pages}" SelectionChanged="GridView_SelectionChanged">
             <GridView.ItemContainerStyle>
                 <Style TargetType="GridViewItem">
