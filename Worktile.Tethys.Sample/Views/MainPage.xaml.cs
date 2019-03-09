@@ -65,15 +65,15 @@ namespace Worktile.Tethys.Sample.Views
                 {
                     Name = "Input",
                     Glyph = "\uE0A2",
-                    //Children = new List<NavItem>
-                    //{
-                    //    new NavItem
-                    //    {
-                    //        Name = "MultipleComboBox",
-                    //        Glyph = "\ue179",
-                    //        SourcePageType = typeof(Input.MultipleComboBoxPage)
-                    //    }
-                    //}
+                    Children = new List<NavItem>
+                    {
+                        new NavItem
+                        {
+                            Name = "Button",
+                            Glyph = "\ue815",
+                            SourcePageType = typeof(Input.ButtonPage)
+                        }
+                    }
                 },
                 new NavItem
                 {
