@@ -40,22 +40,29 @@ namespace Worktile.Tethys
             if (e.NewValue != e.OldValue)
             {
                 AlertMode mode = (AlertMode)e.NewValue;
-                var control = d as Alert;
+                SolidColorBrush brush = null;
                 switch (mode)
                 {
                     case AlertMode.Accent:
-                        control.BorderBrush = Application.Current.Resources["SystemAccentColor"] as SolidColorBrush;
+                        brush = Application.Current.Resources["SystemAccentColor"] as SolidColorBrush;
                         break;
                     case AlertMode.Success:
-                        control.BorderBrush = Application.Current.Resources["PrimaryBrush"] as SolidColorBrush;
+                        brush = Application.Current.Resources["PrimaryBrush"] as SolidColorBrush;
                         break;
                     case AlertMode.Warning:
-                        control.BorderBrush = Application.Current.Resources["WarningBrush"] as SolidColorBrush;
+                        brush = Application.Current.Resources["WarningBrush"] as SolidColorBrush;
                         break;
                     case AlertMode.Danger:
-                        control.BorderBrush = Application.Current.Resources["DangerBrush"] as SolidColorBrush;
+                        brush = Application.Current.Resources["DangerBrush"] as SolidColorBrush;
                         break;
                 }
+                var control = d as Alert;
+                control.BorderBrush = brush;
+                var backgroundBrush = new SolidColorBrush(brush.Color)
+                {
+                    Opacity = .1
+                };
+                control.Background = backgroundBrush;
             }
         }
     }
