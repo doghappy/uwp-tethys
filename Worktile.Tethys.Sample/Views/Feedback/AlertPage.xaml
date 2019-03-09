@@ -1,0 +1,30 @@
+﻿<Page
+    x:Class="Worktile.Tethys.Sample.Views.Feedback.AlertPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Worktile.Tethys.Sample.Views.Feedback"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:tethys="using:Worktile.Tethys"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel Padding="32">
+        <tethys:Alert Text="Home Icon, Default Accent" Icon="Home" Margin="0 0 0 16"/>
+        <tethys:Alert Text="Home Icon, Success" Icon="Home" Mode="Success" Margin="0 0 0 16"/>
+        <tethys:Alert Text="Home Icon, Warning" Icon="Home" Mode="Warning" Margin="0 0 0 16"/>
+        <tethys:Alert Text="Home Icon, Danger" Icon="Home" Mode="Danger" Margin="0 0 0 16"/>
+
+        <tethys:Alert Text="Custom Icon, Accent" Margin="0 0 0 16">
+            <tethys:Alert.Icon>
+                <FontIcon Glyph="&#xE716;"/>
+            </tethys:Alert.Icon>
+        </tethys:Alert>
+        
+        <tethys:Alert Text="Custom Icon, Danger" Mode="Danger">
+            <tethys:Alert.Icon>
+                <FontIcon Glyph="&#xE716;"/>
+            </tethys:Alert.Icon>
+        </tethys:Alert>
+    </StackPanel>
+</Page>
