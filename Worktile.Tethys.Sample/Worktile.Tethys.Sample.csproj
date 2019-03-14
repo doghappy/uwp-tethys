@@ -178,7 +178,12 @@
       <Version>4.7.0.9</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
-      <Version>6.2.3</Version>
+      <Version>6.2.8</Version>
+    </PackageReference>
+    <PackageReference Include="runtime.win10-arm64.Microsoft.Net.Native.Compiler">
+      <Version>2.2.4</Version>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
