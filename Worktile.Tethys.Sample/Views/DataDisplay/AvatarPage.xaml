@@ -11,7 +11,7 @@
 
     <ScrollViewer>
         <StackPanel>
-            <tethys:Avatar DisplayName="揣玉和"/>
+            <!--<tethys:Avatar DisplayName="揣玉和"/>
             <tethys:Avatar DisplayName="王雄"/>
             <tethys:Avatar DisplayName="郭梦迪"/>
             <tethys:Avatar DisplayName="WX"/>
@@ -20,9 +20,23 @@
             <tethys:Avatar DisplayName="郭梦迪" BadgeIcon="&#xE64E;" BadgeIconFontFamily="ms-appx:///Worktile.Tethys/Assets/Fonts/iconfont.ttf#wtf"/>
             <tethys:Avatar DisplayName="WX" Source="https://s3.cn-north-1.amazonaws.com.cn/lclogo/8dbc28b9-ec0e-4d2e-b66d-ea235525942d_180x180.png"/>
 
-            <tethys:Avatar DisplayName="王雄" Size="40"/>
-            <tethys:Avatar DisplayName="WX" Size="40"/>
-            <tethys:Avatar DisplayName="WX" Size="40" Source="https://s3.cn-north-1.amazonaws.com.cn/lclogo/8dbc28b9-ec0e-4d2e-b66d-ea235525942d_180x180.png"/>
+            <tethys:Avatar DisplayName="王雄"/>
+            <tethys:Avatar DisplayName="WX"/>
+            <tethys:Avatar DisplayName="WX" Source="https://s3.cn-north-1.amazonaws.com.cn/lclogo/8dbc28b9-ec0e-4d2e-b66d-ea235525942d_180x180.png"/>-->
+
+            <tethys:Avatar DisplayName="王雄哥"/>
+            <tethys:Avatar DisplayName="Hero Wong"/>
+            <tethys:Avatar DisplayName="王雄"
+                           Icon="&#xE64E;"
+                           FontFamily="ms-appx:///Worktile.Tethys/Assets/Fonts/iconfont.ttf#wtf"/>
+            <tethys:Avatar DisplayName="Hero Wong"
+                           Icon="&#xE64E;"
+                           FontFamily="ms-appx:///Worktile.Tethys/Assets/Fonts/iconfont.ttf#wtf"/>
+            <tethys:Avatar DisplayName="王雄哥"
+                           Source="https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/images/shoulder-tap-static-payload.png"/>
+            <tethys:Avatar DisplayName="实时猫"
+                           Source="https://s3.cn-north-1.amazonaws.com.cn/lcstatic/shishimao.png?v=7.3.5"/>
+
         </StackPanel>
     </ScrollViewer>
 </Page>
