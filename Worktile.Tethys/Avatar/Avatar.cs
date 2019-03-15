@@ -1,16 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.IO;
+﻿using System.IO;
 using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text.RegularExpressions;
-using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Documents;
-using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 
@@ -23,21 +15,7 @@ namespace Worktile.Tethys
             DefaultStyleKey = typeof(Avatar);
             SizeChanged += Avatar_SizeChanged;
             Loaded += Avatar_Loaded;
-            _brushes = new SolidColorBrush[]
-            {
-                new SolidColorBrush(Color.FromArgb(255, 44, 204, 218)),
-                new SolidColorBrush(Color.FromArgb(255, 45, 188, 255)),
-                new SolidColorBrush(Color.FromArgb(255, 78, 138, 249)),
-                new SolidColorBrush(Color.FromArgb(255, 112, 118, 250)),
-                new SolidColorBrush(Color.FromArgb(255, 148, 115, 253)),
-                new SolidColorBrush(Color.FromArgb(255, 239, 126, 222)),
-                new SolidColorBrush(Color.FromArgb(255, 153, 215, 90)),
-                new SolidColorBrush(Color.FromArgb(255, 102, 192, 96)),
-                new SolidColorBrush(Color.FromArgb(255, 57, 186, 93))
-            };
         }
-
-        readonly SolidColorBrush[] _brushes;
 
         private void Avatar_Loaded(object sender, RoutedEventArgs e)
         {
@@ -81,12 +59,6 @@ namespace Worktile.Tethys
             FontSize = Width * .42;
         }
 
-        private SolidColorBrush GetBrush(string displayName)
-        {
-            int code = displayName.Sum(n => n);
-            return _brushes[code % _brushes.Length];
-        }
-
         public string DisplayName
         {
             get => (string)GetValue(DisplayNameProperty);
@@ -120,8 +92,6 @@ namespace Worktile.Tethys
                 {
                     avatar.Initials = value.ToUpper();
                 }
-
-                avatar.Background = avatar.GetBrush(value);
             }
         }
 
@@ -142,13 +112,13 @@ namespace Worktile.Tethys
         public static readonly DependencyProperty IconProperty =
             DependencyProperty.Register("Icon", typeof(string), typeof(Avatar), new PropertyMetadata(null));
 
-        public string Initials
+        private string Initials
         {
             get { return (string)GetValue(InitialsProperty); }
             set { SetValue(InitialsProperty, value); }
         }
 
-        public static readonly DependencyProperty InitialsProperty =
-            DependencyProperty.Register("Initials", typeof(string), typeof(Avatar), new PropertyMetadata(0));
+        private static readonly DependencyProperty InitialsProperty =
+            DependencyProperty.Register("Initials", typeof(string), typeof(Avatar), new PropertyMetadata(null));
     }
 }
