@@ -105,20 +105,20 @@ namespace Worktile.Tethys
                 string value = e.NewValue.ToString();
                 if (Regex.IsMatch(value, @"^[\u4e00-\u9fa5]+$") && value.Length > 2)
                 {
-                    avatar.DisplayName = value.Substring(value.Length - 2, 2);
+                    avatar.Initials = value.Substring(value.Length - 2, 2);
                 }
                 else if (Regex.IsMatch(value, @"^[a-zA-Z\/\s]+$") && value.IndexOf(' ') > 0)
                 {
                     var arr = value.Split(' ');
-                    avatar.DisplayName = (arr[0].First().ToString() + arr[1].First()).ToUpper();
+                    avatar.Initials = (arr[0].First().ToString() + arr[1].First()).ToUpper();
                 }
                 else if (value.Length > 2)
                 {
-                    avatar.DisplayName = value.Substring(0, 2).ToUpper();
+                    avatar.Initials = value.Substring(0, 2).ToUpper();
                 }
                 else
                 {
-                    avatar.DisplayName = value.ToUpper();
+                    avatar.Initials = value.ToUpper();
                 }
 
                 avatar.Background = avatar.GetBrush(value);
@@ -141,5 +141,14 @@ namespace Worktile.Tethys
 
         public static readonly DependencyProperty IconProperty =
             DependencyProperty.Register("Icon", typeof(string), typeof(Avatar), new PropertyMetadata(null));
+
+        public string Initials
+        {
+            get { return (string)GetValue(InitialsProperty); }
+            set { SetValue(InitialsProperty, value); }
+        }
+
+        public static readonly DependencyProperty InitialsProperty =
+            DependencyProperty.Register("Initials", typeof(string), typeof(Avatar), new PropertyMetadata(0));
     }
 }

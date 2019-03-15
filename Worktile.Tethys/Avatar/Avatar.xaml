@@ -36,7 +36,7 @@
                         </VisualStateManager.VisualStateGroups>
 
                         <TextBlock x:Name="InitialsTextBlock"
-                                   Text="{TemplateBinding DisplayName}"
+                                   Text="{TemplateBinding Initials}"
                                    AutomationProperties.AccessibilityView="Raw"
                                    FontFamily="{TemplateBinding FontFamily}"
                                    Foreground="{TemplateBinding Foreground}"
