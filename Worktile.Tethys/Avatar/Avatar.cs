@@ -23,12 +23,14 @@ namespace Worktile.Tethys
             {
                 VisualStateManager.GoToState(this, "Icon", false);
             }
-            else if (Source is BitmapImage bitmap)
+
+            if (Source != null && Source is BitmapImage bitmap)
             {
                 if (Path.GetExtension(bitmap.UriSource.AbsolutePath.ToLower()) == ".png")
                 {
                     Background = Foreground;
                 }
+                VisualStateManager.GoToState(this, "Photo", false);
             }
         }
 
@@ -112,13 +114,13 @@ namespace Worktile.Tethys
         public static readonly DependencyProperty IconProperty =
             DependencyProperty.Register("Icon", typeof(string), typeof(Avatar), new PropertyMetadata(null));
 
-        private string Initials
+        public string Initials
         {
             get { return (string)GetValue(InitialsProperty); }
-            set { SetValue(InitialsProperty, value); }
+            private set { SetValue(InitialsProperty, value); }
         }
 
-        private static readonly DependencyProperty InitialsProperty =
+        public static readonly DependencyProperty InitialsProperty =
             DependencyProperty.Register("Initials", typeof(string), typeof(Avatar), new PropertyMetadata(null));
     }
 }

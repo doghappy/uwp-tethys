@@ -32,6 +32,12 @@
                                         <Setter Target="FontIcon.Visibility" Value="Visible"/>
                                     </VisualState.Setters>
                                 </VisualState>
+                                <VisualState x:Name="Photo">
+                                    <VisualState.Setters>
+                                        <Setter Target="InitialsTextBlock.Visibility" Value="Visible"/>
+                                        <Setter Target="FontIcon.Visibility" Value="Collapsed"/>
+                                    </VisualState.Setters>
+                                </VisualState>
                             </VisualStateGroup>
                         </VisualStateManager.VisualStateGroups>
 
