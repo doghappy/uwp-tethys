@@ -11,7 +11,7 @@
 
     <ScrollViewer>
         <StackPanel>
-            <tethys:Avatar DisplayName="王雄哥" BorderThickness="5" BorderBrush="Red"/>
+            <tethys:Avatar DisplayName="王雄哥"/>
             <tethys:Avatar DisplayName="王雄" Background="Orange"/>
             <tethys:Avatar DisplayName="Hero Wong"/>
             <tethys:Avatar DisplayName="王雄"
