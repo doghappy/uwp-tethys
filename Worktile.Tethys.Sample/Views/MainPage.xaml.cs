@@ -35,9 +35,9 @@ namespace Worktile.Tethys.Sample.Views
                         },
                         new NavItem
                         {
-                            Name = "Theme",
-                            Glyph = "\ue790",
-                            SourcePageType = typeof(Basic.ThemePage)
+                            Name = "NavView",
+                            Glyph = "\uE179",
+                            SourcePageType = typeof(Basic.NavViewPage)
                         }
                     }
                 },

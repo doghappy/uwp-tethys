@@ -9,8 +9,8 @@
         <Setter Property="Width" Value="100" />
         <Setter Property="Height" Value="100" />
         <Setter Property="CornerRadius" Value="100" />
-        <!--<Setter Property="BorderBrush" Value="{ThemeResource ApplicationPageBackgroundThemeBrush}"/>
-        <Setter Property="BorderThickness" Value="2"/>-->
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="FontFamily" Value="{ThemeResource ContentControlThemeFontFamily}" />
         <Setter Property="FontWeight" Value="SemiLight" />
         <Setter Property="IsTabStop" Value="False" />
@@ -22,7 +22,9 @@
                           Width="{TemplateBinding Width}"
                           Height="{TemplateBinding Height}"
                           Background="{TemplateBinding Background}"
-                          CornerRadius="{TemplateBinding CornerRadius}">
+                          CornerRadius="{TemplateBinding CornerRadius}"
+                          BorderBrush="{TemplateBinding BorderBrush}"
+                          BorderThickness="{TemplateBinding BorderThickness}">
 
                         <VisualStateManager.VisualStateGroups>
                             <VisualStateGroup x:Name="CommonStates">

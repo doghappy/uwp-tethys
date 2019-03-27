@@ -1,0 +1,37 @@
+﻿<Page
+    x:Class="Worktile.Tethys.Sample.Views.Basic.NavViewPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Worktile.Tethys.Sample.Views.Basic"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:tethys="using:Worktile.Tethys"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <tethys:NavView MenuItemsSource="{x:Bind Items}">
+            <tethys:NavView.MenuItemTemplate>
+                <DataTemplate x:DataType="local:WtApp">
+                    <tethys:NavViewItem>
+                        <FontIcon Glyph="{x:Bind Glyph}" FontSize="24" Style="{StaticResource WtfIcon}"/>
+                        <tethys:NavViewItem.PointerOverContent>
+                            <TextBlock Text="Pointer Over"/>
+                        </tethys:NavViewItem.PointerOverContent>
+                    </tethys:NavViewItem>
+                    <!--<tethys:NavViewItem Label="{x:Bind Name}">
+                        <tethys:NavViewItem.Icon>
+                            <FontIcon Glyph="{x:Bind Glyph}" FontSize="24" Style="{StaticResource WtfIcon}"/>
+                        </tethys:NavViewItem.Icon>
+                        <tethys:NavViewItem.SelectedIcon>
+                            <FontIcon Glyph="{x:Bind GlyphO}" FontSize="24" Style="{StaticResource WtfIcon}"/>
+                        </tethys:NavViewItem.SelectedIcon>
+                    </tethys:NavViewItem>-->
+                </DataTemplate>
+            </tethys:NavView.MenuItemTemplate>
+            <Rectangle Width="100" Height="100" Fill="Red"/>
+        </tethys:NavView>
+
+
+    </Grid>
+</Page>
