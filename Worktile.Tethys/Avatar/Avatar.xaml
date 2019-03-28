@@ -13,12 +13,16 @@
         <Setter Property="FontWeight" Value="SemiLight" />
         <Setter Property="IsTabStop" Value="False" />
         <Setter Property="AutomationProperties.AccessibilityView" Value="Raw" />
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="local:Avatar">
                     <Grid x:Name="RootGrid"
                           Width="{TemplateBinding Width}"
                           Height="{TemplateBinding Height}"
+                          BorderBrush="{TemplateBinding BorderBrush}"
+                          BorderThickness="{TemplateBinding BorderThickness}"
                           Background="{TemplateBinding Background}"
                           CornerRadius="{TemplateBinding CornerRadius}">
 
