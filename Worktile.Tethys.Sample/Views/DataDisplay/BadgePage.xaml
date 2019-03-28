@@ -66,8 +66,7 @@
             </StackPanel>
         </StackPanel>
 
-        <TextBlock Text="Advance" Style="{ThemeResource SubtitleTextBlockStyle}" Margin="0 16 0 0"/>
-        <StackPanel Orientation="Horizontal">
+        <StackPanel Orientation="Horizontal" Margin="0 16 0 0">
             <StackPanel>
                 <Grid HorizontalAlignment="Left" Height="28" MinWidth="30" Margin="12">
                     <TextBlock Text="Collapse when Number is 0" VerticalAlignment="Bottom"/>

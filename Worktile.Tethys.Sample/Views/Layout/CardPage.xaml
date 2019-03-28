@@ -20,7 +20,7 @@
                 <tethys:Card Margin="12" Width="300" Height="300" Title="Title" Description="Description">
                     <StackPanel>
                         <TextBlock Text="Top"/>
-                        <Rectangle Height="400" Fill="Red"/>
+                        <Rectangle Height="300" Fill="Red"/>
                         <TextBlock Text="Bottom"/>
                     </StackPanel>
                 </tethys:Card>
