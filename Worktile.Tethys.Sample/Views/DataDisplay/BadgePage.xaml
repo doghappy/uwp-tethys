@@ -1,0 +1,85 @@
+﻿<Page
+    x:Class="Worktile.Tethys.Sample.Views.DataDisplay.BadgePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Worktile.Tethys.Sample.Views.DataDisplay"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:tethys="using:Worktile.Tethys"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel Padding="32">
+        <TextBlock Text="Normal" Style="{ThemeResource SubtitleTextBlockStyle}"/>
+        <StackPanel Orientation="Horizontal">
+            <StackPanel>
+                <Grid HorizontalAlignment="Left" Height="28" Width="30" Margin="12">
+                    <TextBlock Text="1" VerticalAlignment="Bottom"/>
+                    <tethys:Badge Number="1"/>
+                </Grid>
+            </StackPanel>
+            <StackPanel>
+                <Grid HorizontalAlignment="Left" Height="28" Width="30" Margin="12">
+                    <tethys:Badge Number="2"/>
+                    <TextBlock Text="2" VerticalAlignment="Bottom"/>
+                </Grid>
+            </StackPanel>
+            <StackPanel>
+                <Grid HorizontalAlignment="Left" Height="28" Width="30" Margin="12">
+                    <TextBlock Text="11" VerticalAlignment="Bottom"/>
+                    <tethys:Badge Number="11"/>
+                </Grid>
+            </StackPanel>
+            <StackPanel>
+                <Grid HorizontalAlignment="Left" Height="28" Width="30" Margin="12">
+                    <TextBlock Text="101" VerticalAlignment="Bottom"/>
+                    <tethys:Badge Number="101"/>
+                </Grid>
+            </StackPanel>
+        </StackPanel>
+
+        <TextBlock Text="Custom" Style="{ThemeResource SubtitleTextBlockStyle}" Margin="0 16 0 0"/>
+        <StackPanel Orientation="Horizontal">
+            <StackPanel>
+                <Grid HorizontalAlignment="Left" Height="28" Width="30" Margin="12">
+                    <TextBlock Text="1" VerticalAlignment="Bottom"/>
+                    <tethys:Badge Number="1" Background="{StaticResource PrimaryBrush}"/>
+                </Grid>
+            </StackPanel>
+            <StackPanel>
+                <Grid HorizontalAlignment="Left" Height="28" Width="30" Margin="12">
+                    <tethys:Badge Number="2" Background="{StaticResource WarningBrush}" Foreground="Red"/>
+                    <TextBlock Text="2" VerticalAlignment="Bottom"/>
+                </Grid>
+            </StackPanel>
+            <StackPanel>
+                <Grid HorizontalAlignment="Left" Height="40" Width="50" Margin="12">
+                    <TextBlock Text="101" VerticalAlignment="Bottom"/>
+                    <tethys:Badge Number="101" Background="{StaticResource DangerBrush}" FontSize="20"/>
+                </Grid>
+            </StackPanel>
+            <StackPanel>
+                <Grid HorizontalAlignment="Left" Height="28" MinWidth="30" Margin="12">
+                    <TextBlock Text="Content" VerticalAlignment="Bottom"/>
+                    <tethys:Badge Content="new" Background="{StaticResource DangerBrush}"/>
+                </Grid>
+            </StackPanel>
+        </StackPanel>
+
+        <TextBlock Text="Advance" Style="{ThemeResource SubtitleTextBlockStyle}" Margin="0 16 0 0"/>
+        <StackPanel Orientation="Horizontal">
+            <StackPanel>
+                <Grid HorizontalAlignment="Left" Height="28" MinWidth="30" Margin="12">
+                    <TextBlock Text="Collapse when Number is 0" VerticalAlignment="Bottom"/>
+                    <tethys:Badge Number="0"/>
+                </Grid>
+            </StackPanel>
+            <StackPanel>
+                <Grid HorizontalAlignment="Left" Height="28" MinWidth="30" Margin="12">
+                    <TextBlock Text="Visible when Number is not 0" VerticalAlignment="Bottom"/>
+                    <tethys:Badge Number="-1"/>
+                </Grid>
+            </StackPanel>
+        </StackPanel>
+    </StackPanel>
+</Page>

@@ -58,6 +58,12 @@ namespace Worktile.Tethys.Sample.Views
                             Name = "Avatar",
                             Glyph = "\ue13d",
                             SourcePageType = typeof(DataDisplay.AvatarPage)
+                        },
+                        new NavItem
+                        {
+                            Name = "Badge",
+                            Glyph = "\ue82f",
+                            SourcePageType = typeof(DataDisplay.BadgePage)
                         }
                     }
                 },

@@ -8,6 +8,7 @@
         <ResourceDictionary Source="ms-appx:///Worktile.Tethys/Alert/Alert.xaml"/>
         <ResourceDictionary Source="ms-appx:///Worktile.Tethys/NavView/NavView.xaml"/>
         <ResourceDictionary Source="ms-appx:///Worktile.Tethys/NavView/NavViewItem.xaml"/>
+        <ResourceDictionary Source="ms-appx:///Worktile.Tethys/Badge/Badge.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 
     <SolidColorBrush x:Key="PrimaryBrush" Color="#22d7bb"/>
@@ -51,4 +52,6 @@
     <!--<Style TargetType="Button" BasedOn="{StaticResource ButtonRevealStyle}">
         <Setter Property="Padding" Value="16,8"/>
     </Style>-->
+
+    
 </ResourceDictionary>

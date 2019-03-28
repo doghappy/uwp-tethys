@@ -135,6 +135,9 @@
     <Compile Include="Views\DataDisplay\AvatarPage.xaml.cs">
       <DependentUpon>AvatarPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\DataDisplay\BadgePage.xaml.cs">
+      <DependentUpon>BadgePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\DataDisplay\LabelPage.xaml.cs">
       <DependentUpon>LabelPage.xaml</DependentUpon>
     </Compile>
@@ -200,6 +203,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\DataDisplay\AvatarPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DataDisplay\BadgePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
