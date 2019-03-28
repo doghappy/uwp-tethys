@@ -123,6 +123,7 @@
     <Compile Include="Alert\AlertMode.cs" />
     <Compile Include="Avatar\Avatar.cs" />
     <Compile Include="Badge\Badge.cs" />
+    <Compile Include="Card\Card.cs" />
     <Compile Include="IconTextBlock\IconTextBlock.cs" />
     <Compile Include="Alert\Alert.cs" />
     <Compile Include="Label\Label.cs" />
@@ -140,6 +141,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Badge\Badge.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Card\Card.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

@@ -94,6 +94,20 @@ namespace Worktile.Tethys.Sample.Views
                             SourcePageType = typeof(Feedback.AlertPage)
                         }
                     }
+                },
+                new NavItem
+                {
+                    Name = "Layout",
+                    Glyph = "\uE71A",
+                    Children = new List<NavItem>
+                    {
+                        new NavItem
+                        {
+                            Name = "Card",
+                            Glyph = "\uE737",
+                            SourcePageType = typeof(Layout.CardPage)
+                        }
+                    }
                 }
             };
         }

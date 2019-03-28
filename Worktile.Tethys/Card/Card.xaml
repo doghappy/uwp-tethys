@@ -1,0 +1,42 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Worktile.Tethys">
+
+    <Style TargetType="local:Card" >
+        <Setter Property="Padding" Value="20"/>
+        <Setter Property="Background" Value="{ThemeResource SystemControlAcrylicElementBrush}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:Card">
+                    <Grid Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+
+                        <Grid BorderThickness="4 0 0 0" BorderBrush="{ThemeResource SystemAccentColor}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            
+                            <TextBlock Text="{TemplateBinding Title}"
+                                       Style="{ThemeResource SubtitleTextBlockStyle}"
+                                       Margin="8 0 0 0"/>
+                            <TextBlock Grid.Column="1"
+                                       Text="{TemplateBinding Description}"
+                                       VerticalAlignment="Center"
+                                       Foreground="{ThemeResource SystemControlForegroundBaseMediumBrush}"
+                                       Margin="8 0 0 0"/>
+                        </Grid>
+
+                        <ScrollViewer Grid.Row="1" Margin="0 16 0 0">
+                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                        </ScrollViewer>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
